@@ -1,6 +1,4 @@
-getuser();
-
-function getuser() {
+(function () {
     console.log('Checking for easy auth user');
     try {
         fetch('/.auth/me')
@@ -17,4 +15,4 @@ function getuser() {
     } catch (error) {
         document.getElementById('auth').style.display = 'none';
     }
-}
+})();
