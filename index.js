@@ -4,7 +4,7 @@
         .then((response) => response.json())
         .then((data) => {
             document.getElementById('noauth').style.display = 'none';
-            console.log('response: ', data);
+            console.log('easy auth response: ', data);
             if (data[0]) {
                 const msg = `<p>You are logged in as: ${data[0].user_id}</p><p>Open F12 Dev Tools to see your tokens.</p>`;
                 console.log('ID token: ', data[0].id_token);
