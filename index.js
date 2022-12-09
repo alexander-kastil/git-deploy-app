@@ -9,7 +9,8 @@ function getuser() {
                 document.getElementById('noauth').style.display = 'none';
                 console.log('response: ', data);
                 if (data[0]) {
-                    const msg = `${data[0].user_id}!<br/> This is your access token:  ${data[0].access_token}.`;
+                    const msg = `${data[0].user_id}!<br/>Open F12 Dev Tools to see your access token.`;
+                    console.log('Access token: ', data[0].access_token);
                     document.getElementById('auth').innerHTML = msg;
                 }
             });
