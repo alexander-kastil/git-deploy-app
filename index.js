@@ -4,12 +4,12 @@
         .then((response) => response.json())
         .then((data) => {
             document.getElementById('noauth').style.display = 'none';
-            console.log('easy auth response: ', data);
             if (data[0]) {
                 const msg = `<p>You are logged in as: ${data[0].user_id}</p><p>Open F12 Dev Tools to see your tokens.</p>`;
+                document.getElementById('auth').innerHTML = msg;
+                console.log('Full easy auth response: ', data[0]);
                 console.log('ID token: ', data[0].id_token);
                 console.log('Access token: ', data[0].access_token);
-                document.getElementById('auth').innerHTML = msg;
             }
         })
         .catch(() => {
