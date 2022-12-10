@@ -5,7 +5,7 @@
         .then((data) => {
             document.getElementById('noauth').style.display = 'none';
             if (data[0]) {
-                const msg = `<p>You are logged in as: ${data[0].user_id}</p><p>Open F12 Dev Tools to see your tokens.</p>`;
+                const msg = `<p>You are logged in as: ${data[0].user_id}</p><p>Open F12 Dev Tools to see your tokens from /.auth/me</p>`;
                 document.getElementById('auth').innerHTML = msg;
                 console.log('Full easy auth response: ', data[0]);
                 console.log('ID token: ', data[0].id_token);
