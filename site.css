@@ -126,7 +126,7 @@ table {
 .container {
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: rgb(231, 40, 40);
     width: 100vw;
 }
 
